@@ -2,7 +2,7 @@
 int a = 'é';
 int b = 'è';
 int c = 'à';
-
+ 
 char *majuscule(char *s)
 {
     int i = 0;
