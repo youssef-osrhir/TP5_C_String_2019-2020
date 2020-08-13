@@ -8,7 +8,7 @@ void supprimer_char(char *s, int i)
     s[j] = s[j + 1];
     j++;
   }
-}
+} 
 char *supprimer_espaces(char *s)
 {
   int i = 0;
