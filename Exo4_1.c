@@ -1,38 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-char sub[100];
-
-char *substring(char *str, int start, int stop)
+char * substring (char * str, int start, int stop)
 {
+  if(start >= stop || str == NULL)
+    return NULL;
 
-    if (stop <= start)
-        return NULL;
+  if(stop >= strlen(str))
+    stop = strlen(str)-1;
+  
+  char sous_chaine[100];
+  int j=0;
 
-    if (stop >= strlen(str))
-        stop = strlen(str) - 1;
+  for(int i=start; i<stop;i++)
+  {
+    sous_chaine[j]=str[i];
+    j++;
+  }
 
-    if (str == NULL)
-        return NULL;
+  puts(sous_chaine);
 
-    int i = 0;
-    int j = 0;
-    while (str[i] != '\0')
-    {
+  return sous_chaine;
 
-        if (i >= start && i < stop)
-        {
-            sub[j] = str[i];
-            j++;
-        }
 
-        i++;
-    }
-
-    return sub;
 }
 int main()
 {
-    char a[] = "comme ici, comme ailleurs";
-    puts(substring(a, 0, 10));
+  char s[]="Bonjour tous le monde";
+
+  substring(s, 3, 14);
 }
