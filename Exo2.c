@@ -78,11 +78,6 @@ int main()
    printf("%ld\n",strlen(chaine));
 
 
-   /*supprimer_espaces(chaine);
-
-   puts(chaine);
-   */
-   
-
+ 
     
 }  
